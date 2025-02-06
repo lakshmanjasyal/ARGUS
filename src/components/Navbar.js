@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from 'next/link'
 import Image from 'next/image'
+
 import {
   Dropdown,
   DropdownTrigger,
@@ -43,6 +44,22 @@ const Page = () => {
       label: "Raise Funding",
     },
   ];
+  const demos = [
+    {
+      key: "free demo",
+      label: "Free Demo",
+      path: './app/free'
+    },
+    {
+      key: "premium",
+      label: "Premium",
+    },
+    // {
+    //   key: "funding",
+    //   label: "CrowdFunding",
+    // },
+   
+  ];
   const communities = [
     {
       key: "Trainings",
@@ -60,6 +77,7 @@ const Page = () => {
       key: "Helps",
       label: "Helping-Hands",
     },
+   
   ];
   const rescue = [
     {
@@ -108,6 +126,12 @@ const Page = () => {
     if (itemKey === "destructed") {
       window.location.href="/medfund";
     }
+    if (itemKey === "free demo") {
+      window.location.href = "/demo1";
+    }
+    if (itemKey === "premium") {
+      window.location.href = "/demo2";
+    }
   };
 
   return (
@@ -116,7 +140,7 @@ const Page = () => {
         <div className="absolute right-0">
           <button  className=" text-white text-md right-72 mt-5 px-1 mx-2 border-b-1 border-l-1 rounded-sm"><Link href='/'>ResQReady</Link></button>
           <button  className=" text-white text-md right-72 mt-5 px-1 mx-2 border-b-1 border-l-1 rounded-sm"><Link href='/firstresponders'>First Respond</Link></button>
-          <button  className=" text-white text-md right-72 mt-5 px-1 mx-2 border-b-1 border-l-1 rounded-sm"><Link href='/firstresponders'>Disaster Prediction</Link></button>
+          
           <button  className=" text-white text-md right-72 mt-5 px-1 mx-2 border-b-1 border-l-1 rounded-sm"><Link href="/courses">Training and Events</Link></button>
           <button  className=" text-white text-md right-72 mt-5 px-1 mx-2 border-b-1 border-l-1 rounded-sm"><Link href='/location'>Evacuation Zones</Link></button>
           <Dropdown className="bg-white">
@@ -176,6 +200,27 @@ const Page = () => {
                 )}
               </DropdownMenu>
           </Dropdown>
+          <Dropdown className="bg-white">
+              <DropdownTrigger className="bg-red-600">
+                <Button variant="" className=" text-white right-8 -ml-6 mt-3 px-8 text-md  rounded-md">
+                  Demo
+                </Button> 
+              </DropdownTrigger>
+              <DropdownMenu aria-label="Dynamic Actions" items={demos}>
+                {(  demos) => (
+                  <DropdownItem
+                    key={demos.key}
+                    color={demos.key === "delete" ? "danger" : "default"}
+                    className={demos.key === "delete" ? "text-danger" : ""}
+                    onClick={() => handleItemClick(demos.key)}
+                  >
+                    {demos.label}
+                  </DropdownItem>
+                )}
+              </DropdownMenu>
+          </Dropdown>
+          
+          
           <Dropdown className="bg-white">
             <DropdownTrigger className="bg-red-600">
               <Button variant="" className=" text-white bg-red-600 right-6 mt-3 px-8 rounded-md">
