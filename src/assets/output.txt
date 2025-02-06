@@ -1,0 +1,39 @@
+{
+  "time": 0.038731049000034545,
+  "image": {
+    "width": 612,
+    "height": 408
+  },
+  "predictions": [
+    {
+      "x": 239.5,
+      "y": 307,
+      "width": 245,
+      "height": 202,
+      "confidence": 0.9491057395935059,
+      "class": "vest",
+      "class_id": 5,
+      "detection_id": "3a2bb854-b717-4a5d-834e-944e2cd24de5"
+    },
+    {
+      "x": 250,
+      "y": 215.5,
+      "width": 304,
+      "height": 385,
+      "confidence": 0.9001628160476685,
+      "class": "person",
+      "class_id": 3,
+      "detection_id": "e2401bea-4804-4116-a666-32cb436cf41c"
+    },
+    {
+      "x": 244,
+      "y": 77.5,
+      "width": 140,
+      "height": 91,
+      "confidence": 0.900050938129425,
+      "class": "blue",
+      "class_id": 0,
+      "detection_id": "679f6352-702a-4c10-af8e-790364a82fd3"
+    }
+  ]
+}
