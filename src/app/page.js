@@ -11,11 +11,12 @@ export default function Home() {
       {/* <div className="h-60 w-96 rounded-e-full p-4 ml-24 mt-16 bg-blue-300">
         akdbj
       </div> */}
-      <p className="text-8xl font-roboto font-bold  w-16 ml-[24rem] mt-24 mb-4 text-black">ARDUS </p>
+      <p className="text-8xl font-roboto font-bold  w-16 ml-[24rem] mt-24 mb-4 text-black">ARGUS </p>
       <p className="text-5xl font-robot  tracking-extra-widest   ml-[26rem] mt-5  mb-4 text-black">THE VISION</p>
      
-      <p className="text-5xl font-sherif ml-[12rem] font-bold italic mt-[5rem] text-black">A community prepared ,</p>
-      <p className="text-5xl font-sherif ml-[20rem] font-bold italic text-black">is a community protected.</p>
+      <p className="text-5xl font-sherif ml-[14rem] font-bold italic mt-[5rem] text-black">A community prepared ,</p>
+      <p className="text-5xl font-sherif ml-[22rem] font-bold italic text-black">is a community protected.</p>
+      <p className="text-3xl font-sherif ml-[28rem] mt-[10rem] font-bold  text-black">join community</p>
       <iframe src='https://my.spline.design/tvatimedoor-ff0791bda22ca9b15dc0e17c2982339e/' frameborder='0' width='30%' height='90%' className="rounded-full absolute right-12 top-24"></iframe>
     </div>
     </>

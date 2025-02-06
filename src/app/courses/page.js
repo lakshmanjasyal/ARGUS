@@ -36,10 +36,10 @@ const page = () => {
 
   return (
     <>
-      <div style={{backgroundColor: 'white'}}>
-      <div className='bg-black text-white h-fit pb-20'>
+      <div className="bg-gradient-to-r from-red-800 via-orange-700 to-yellow-600 h-screen w-screen text-white" style={{backgroundColor: 'white'}}>
+      
         <Navbar />
-        <p className='text-6xl text-center mt-20'>VR-Training</p>
+        <p className='text-6xl italic text-center mt-20'>VR-Training</p>
         <div className='ml-12 mt-10'>
           {courses.filter((course) => course.category === 'vr').map((course) => (
             <div className='bg-gray-400 w-80 rounded-xl h-72' key={course.id}>
@@ -49,7 +49,7 @@ const page = () => {
             </div>
           ))}
         </div>
-        <p className='text-6xl text-center mt-20'>Survival Techniques</p>
+        <p className='text-6xl text-center italic mt-20'>Survival Techniques</p>
         <div className='ml-12 mt-10'>
           {courses.filter((course) => course.category === 'survival').map((course) => (
             <div className='bg-gray-400 w-80 rounded-xl h-72' key={course.id}>
@@ -60,7 +60,7 @@ const page = () => {
             </div>
           ))}
         </div>
-        <p className='text-6xl text-center mt-20'>Training</p>
+        <p className='text-6xl text-center italic  mt-20'>Training</p>
         <div className='ml-12 mt-10'>
           {courses.filter((course) => course.category === 'training').map((course) => (
             <div className='bg-gray-400 w-80 rounded-xl h-72' key={course.id}>
@@ -71,11 +71,11 @@ const page = () => {
             </div>
           ))}
         </div>
-        <p className='text-6xl text-center mt-20'>Courses</p>
+        <p className='text-6xl text-center italic mt-20'>Courses</p>
         <div className='ml-12 mt-10'>
           {/* Add logic to display courses from other categories if needed */}
         </div>
-      </div>
+     
       </div>
     </>
   );
