@@ -2,7 +2,7 @@
 
 ---
 
-# Res-QReady
+# ARGUS THE VISION
 
 Res-QReady is an innovative disaster management platform designed to revolutionize how communities prepare for and respond to emergencies.
 
@@ -16,10 +16,10 @@ Res-QReady is an innovative disaster management platform designed to revolutioni
 - [Running the Project](#running-the-project)
 
 ## Team Members
-- Adarsh Vishwakarma
 - Sajad Hussain
-- Ruvais
-- Abinash Singh
+- Kamesh Singh
+- Lakshman Narayan Jasyal
+- Abhinav Kashyap
 
 ## Product Walkthrough
 Check out our [demo video](Link-here) to see Res-QReady in action. You can also view our [presentation slides](https://drive.google.com/file/d/1w7I89IsM-l8hf5iEoBek6R_pipmeACOE/view?usp=sharing) for a detailed overview.
