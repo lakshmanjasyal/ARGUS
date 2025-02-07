@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from 'next/link'
 import Image from 'next/image'
 
+
 import {
   Dropdown,
   DropdownTrigger,
@@ -48,7 +49,7 @@ const Page = () => {
     {
       key: "free demo",
       label: "Free Demo",
-      path: './app/free'
+      path: './app/free/page.js'
     },
     {
       key: "premium",
@@ -201,24 +202,28 @@ const Page = () => {
               </DropdownMenu>
           </Dropdown>
           <Dropdown className="bg-white">
-              <DropdownTrigger className="bg-red-600">
-                <Button variant="" className=" text-white right-8 -ml-6 mt-3 px-8 text-md  rounded-md">
-                  Demo
-                </Button> 
-              </DropdownTrigger>
-              <DropdownMenu aria-label="Dynamic Actions" items={demos}>
-                {(  demos) => (
-                  <DropdownItem
-                    key={demos.key}
-                    color={demos.key === "delete" ? "danger" : "default"}
-                    className={demos.key === "delete" ? "text-danger" : ""}
-                    onClick={() => handleItemClick(demos.key)}
-                  >
-                    {demos.label}
-                  </DropdownItem>
-                )}
-              </DropdownMenu>
-          </Dropdown>
+  <DropdownTrigger className="bg-red-600">
+    <Button variant="" className="text-white right-8 -ml-6 mt-3 px-8 text-md rounded-md">
+      Demo
+    </Button>
+  </DropdownTrigger>
+  <DropdownMenu aria-label="Dynamic Actions" items={demos}>
+    {/* Remove the dropdown item for Free Demo */}
+    <Link href="/free/page.js">
+      <Button variant="contained" className="w-full mt-2">
+        Free Demo
+      </Button>
+    </Link>
+    <DropdownItem
+      key="premium"
+      color="default"
+      onClick={() => handleItemClick("premium")}
+    >
+      Premium
+    </DropdownItem>
+  </DropdownMenu>
+</Dropdown>
+
           
           
           <Dropdown className="bg-white">
