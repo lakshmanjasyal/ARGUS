@@ -139,7 +139,7 @@ const Page = () => {
     <>
       <div className="bg-black h-16 text-white">
         <div className="absolute right-0">
-          <button  className=" text-white text-md right-72 mt-5 px-1 mx-2 border-b-1 border-l-1 rounded-sm"><Link href='/'>Res'QReady</Link></button>
+          <button  className=" text-white text-md right-72 mt-5 px-1 mx-2 border-b-1 border-l-1 rounded-sm"><Link href='/'>ResQReady</Link></button>
           <button  className=" text-white text-md right-72 mt-5 px-1 mx-2 border-b-1 border-l-1 rounded-sm"><Link href='/firstresponders'>First Respond</Link></button>
           
           <button  className=" text-white text-md right-72 mt-5 px-1 mx-2 border-b-1 border-l-1 rounded-sm"><Link href="/courses">Training and Events</Link></button>

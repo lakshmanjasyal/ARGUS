@@ -41,7 +41,7 @@ Res-QReady is a comprehensive disaster management platform that integrates real-
 - Firebase 
 - Twilio 
 - TensorFlow.js 
-- Gemimi 
+
 
 ## Configuration
 1. Clone the repository.
