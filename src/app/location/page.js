@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import './style.css';
 import { Alert } from 'react-bootstrap'; // Import from React Bootstrap
 import { AlertTriangle, MapPin, Camera, Upload, Users } from 'lucide-react';
 

@@ -1,19 +1,12 @@
-'use client';
+"use client";
 import React from 'react';
 
-
-
-const page = () => {
-
-    return(
-    <>
+const Page = () => {
+  return (
     <div>
-        <h1>HELLOOO</h1>
+      <h1>HELLOOO</h1>
     </div>
-
-
-    </>
-
-    );
+  );
 };
-export default page;
+
+export default Page;
