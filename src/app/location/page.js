@@ -14,10 +14,11 @@ const Page = () => {
   ]);
 
   const riskTypes = [
-    { id: 'flood', label: 'Flood Risk', color: 'bg-blue-500' },
-    { id: 'landslide', label: 'Landslide', color: 'bg-orange-500' },
-    { id: 'infrastructure', label: 'Infrastructure', color: 'bg-red-500' },
+    { id: 'flood', label: 'Flood Risk', color: 'bg-blue-500', textColor: 'text-blue-500' },
+    { id: 'landslide', label: 'Landslide', color: 'bg-orange-500', textColor: 'text-orange-500' },
+    { id: 'infrastructure', label: 'Infrastructure', color: 'bg-red-500', textColor: 'text-red-500' },
   ];
+  
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -67,18 +68,21 @@ const Page = () => {
 
             {/* Risk Type Selection */}
             <div className="space-y-6 mb-8">
-              {riskTypes.map(type => (
-                <button
-                  key={type.id}
-                  onClick={() => setSelectedRiskType(type.id)}
-                  className={`w-full p-5 rounded-xl border-2 flex items-center gap-4 transition-colors
-                    ${selectedRiskType === type.id ? 'border-blue-500 bg-blue-100' : 'border-gray-300'}`}
-                >
-                  <div className={`w-6 h-6 rounded-full ${type.color}`} />
-                  <span className="font-medium text-lg">{type.label}</span>
-                </button>
-              ))}
-            </div>
+  {riskTypes.map((type) => (
+    <button
+      key={type.id}
+      onClick={() => setSelectedRiskType(type.id)}
+      className={`w-full p-5 rounded-xl border-2 flex items-center gap-4 transition-all duration-300
+        ${selectedRiskType === type.id 
+          ? 'border-transparent bg-gradient-to-r from-gray-700 to-gray-900 text-white shadow-lg transform scale-105' 
+          : 'border-gray-300 bg-gray-50 hover:bg-gray-100 hover:border-gray-400'}`}
+    >
+      <div className={`w-6 h-6 rounded-full ${type.color} shadow-md`} />
+      <span className={`font-semibold text-lg ${type.textColor}`}>{type.label}</span>
+    </button>
+  ))}
+</div>
+
 
             {/* Upload Controls */}
             <div className="space-y-6">
