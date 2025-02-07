@@ -12,6 +12,7 @@ import {
 const Page = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [showDemoForm, setShowDemoForm] = useState(false); // State to control form visibility
+  const [showPremiumForm, setShowPremiumForm] = useState(false); // State to control premium form
 
   const items = [
     { key: "Home", label: "Go to DashBoard" },
@@ -63,15 +64,21 @@ const Page = () => {
       window.location.href = "/medfund";
     } else if (itemKey === "free demo") {
       setShowDemoForm(true); // Show the demo form when "free demo" is selected
+      setShowPremiumForm(false); // Hide premium form if it's visible
     } else if (itemKey === "premium") {
-      window.location.href = "/demo2";
+      setShowPremiumForm(true); // Show the premium form
+      setShowDemoForm(false); // Hide the demo form if it's visible
     }
   };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission logic here
     alert("Demo request submitted!");
+  };
+
+  const handlePremiumSubmit = (event) => {
+    event.preventDefault();
+    alert("Premium request submitted!");
   };
 
   return (
@@ -170,25 +177,25 @@ const Page = () => {
       </div>
       <hr className="bg-white" />
 
-      {/* Conditionally render the form when "free demo" is selected */}
+      {/* Free Demo Form */}
       {showDemoForm && (
-        <div className="p-6  bg-white rounded-lg z-50 relative">
+        <div className="p-6 bg-white rounded-lg z-50 relative">
           <h3 className="text-xl font-semibold text-black mb-4">Request Free Demo</h3>
           <form onSubmit={handleFormSubmit}>
             <div className="mb-4">
               <label className="block font-bold text-black">Name</label>
               <input
                 type="text"
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 border  text-black  rounded-md"
                 placeholder="Enter your name"
                 required
               />
             </div>
             <div className="mb-4">
-              <label className="block  font-bold text-black">Phone Number</label>
+              <label className="block font-bold text-black">Phone Number</label>
               <input
                 type="email"
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 border  text-black  rounded-md"
                 placeholder="Enter your phone number"
                 required
               />
@@ -197,16 +204,73 @@ const Page = () => {
               <label className="block font-bold text-black">Organization</label>
               <input
                 type="text"
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 border  text-black  rounded-md"
                 placeholder="Enter organization name"
               />
             </div>
             <div className="mb-4">
-              <label className="block font-bold text-black">Message</label>
+              <label className="block font-bold text-black">Area Of Coverage</label>
               <textarea
-                className="w-full px-3 py-2 border rounded-md"
-                placeholder="Tell us more about your needs"
+                className="w-full px-3 py-2 border  text-black  rounded-md"
+                placeholder="Mention your area of coverage and requirements"
               ></textarea>
+            </div>
+            <div className="mb-4">
+              <label className="block font-bold text-black">Number Of CCTVs Required</label>
+              <input
+                type="text"
+                className="w-full px-3 py-2 border  text-black  rounded-md"
+                placeholder="less than 5"
+                required
+              />
+            </div>
+            <Button type="submit" variant="solid" className="bg-red-600 text-white">
+              Submit
+            </Button>
+          </form>
+        </div>
+      )}
+
+      {/* Premium Demo Dropdown */}
+      {showPremiumForm && (
+        <div className="p-6 bg-white rounded-lg z-50 relative">
+          <h3 className="text-xl font-semibold text-black mb-4">Premium Demo Options</h3>
+          <form onSubmit={handlePremiumSubmit}>
+            <div className="mb-4">
+              <label className="block font-bold text-black">Premium Package</label>
+              <select
+                className="w-full px-3 py-2 border text-black rounded-md"
+                required
+              >
+                <option value="basic">Basic Premium</option>
+                <option value="advanced">Advanced Premium</option>
+                
+              </select>
+            </div>
+            <div className="mb-4">
+              <label className="block font-bold text-black">Organization</label>
+              <input
+                type="text"
+                className="w-full px-3 py-2 border  text-black  rounded-md"
+                placeholder="Enter organisation name"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block font-bold text-black">Area Of Coverage</label>
+              <textarea
+                className="w-full px-3 py-2 border  text-black  rounded-md"
+                placeholder="Mention your area of coverage and requirements"
+              ></textarea>
+            </div>
+            <div className="mb-4">
+              <label className="block font-bold text-black">Number Of CCTVs Required</label>
+              <input
+                type="text"
+                className="w-full px-3 py-2 border  text-black  rounded-md"
+                placeholder="more than 5"
+                required
+              />
             </div>
             <Button type="submit" variant="solid" className="bg-red-600 text-white">
               Submit
